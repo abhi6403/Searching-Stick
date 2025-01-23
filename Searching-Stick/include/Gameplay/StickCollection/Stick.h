@@ -1,4 +1,5 @@
 #pragma once
+#include<SFML/Graphics.hpp>
 #include"UI/UIElement/RectangleShapeView.h"
 
 namespace Gameplay
@@ -7,11 +8,10 @@ namespace Gameplay
 	{
 		struct Stick
 		{
-		private:
+		
 			int data;
 			UI::UIElement::RectangleShapeView* stick_view;
 
-		public:
 			Stick(int data)
 			{
 				this->data = data;

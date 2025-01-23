@@ -3,7 +3,8 @@
 
 namespace Gameplay
 {
-    namespace Collection {
+    namespace Collection 
+    {
 
         enum class SearchType
         {
@@ -11,7 +12,8 @@ namespace Gameplay
             BINARY_SEARCH,
         };
 
-        class StickCollectionModel {
+        class StickCollectionModel 
+        {
 
         public:
             const float max_element_height = 820.f;

@@ -6,7 +6,6 @@
 namespace Gameplay
 {
 	using namespace Collection;
-	class GameplayCntroller;
 	enum class SearchType;
 
 	class GameplayController;
