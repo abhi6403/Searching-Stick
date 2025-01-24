@@ -20,6 +20,8 @@ namespace Gameplay
 			int number_of_array_access;
 			int current_operation_delay;
 
+			sf::String time_complexity;
+
 			StickCollectionView* collection_view;
 			StickCollectionModel* collection_model;
 
@@ -64,6 +66,8 @@ namespace Gameplay
 			int getNumberOfComparisons();
 			int getNumberOfArrayAccess();
 			int getDelayMilliseconds();
+
+			sf::String getTimeComplexity();
 		};
 	}
 }
