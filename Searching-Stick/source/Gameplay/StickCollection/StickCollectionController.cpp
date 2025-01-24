@@ -126,14 +126,12 @@ namespace Gameplay
 
 		void StickCollectionController::processLinearSearch()
 		{
-
+			SoundService* sound_service = ServiceLocator::getInstance()->getSoundService();
 			for (int i = 0; i < sticks.size(); i++)
 			{
-
+				sound_service->playSound(SoundType::COMPARE_SFX);
 				number_of_array_access += 1;
 				number_of_comparisons++;
-
-				ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::COMPARE_SFX);
 
 				if (sticks[i] == stick_to_search)
 				{
@@ -248,6 +246,11 @@ namespace Gameplay
 		int StickCollectionController::getDelayMilliseconds()
 		{
 			return current_operation_delay;
+		}
+
+		sf::String StickCollectionController::getTimeComplexity()
+		{
+			return time_complexity;
 		}
 	}
 }
