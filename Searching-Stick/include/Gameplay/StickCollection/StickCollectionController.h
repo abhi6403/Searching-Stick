@@ -42,6 +42,10 @@ namespace Gameplay
 			void resetSearchStick();
 			void resetVariables();
 
+			void sortElements();
+			bool compareElementsByData(const Stick* a, const Stick* b) const;
+			void processBinarySearch();
+			
 			void processSearchThreadState();
 			void joinThreads();
 			void initializeSticksArray();
