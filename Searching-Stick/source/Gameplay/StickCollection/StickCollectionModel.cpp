@@ -22,7 +22,7 @@ namespace Gameplay
 		}
 		void StickCollectionModel::setElementSpacing(float space)
 		{
-
+			elements_spacing = space;
 		}
 	}
 }
