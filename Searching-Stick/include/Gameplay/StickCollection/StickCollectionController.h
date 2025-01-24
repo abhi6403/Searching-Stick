@@ -18,6 +18,7 @@ namespace Gameplay
 		private:
 			int number_of_comparisons;
 			int number_of_array_access;
+			int current_operation_delay;
 
 			StickCollectionView* collection_view;
 			StickCollectionModel* collection_model;
@@ -27,6 +28,7 @@ namespace Gameplay
 			Stick* stick_to_search;
 
 			Collection::SearchType search_type;
+			std::thread search_thread;
 
 			void initializeSticks();
 			void shuffleSticks();
@@ -38,6 +40,8 @@ namespace Gameplay
 			void resetSearchStick();
 			void resetVariables();
 
+			void processSearchThreadState();
+			void joinThreads();
 			void initializeSticksArray();
 			void processLinearSearch();
 			float calculateStickHeight(int array_pos);
@@ -59,6 +63,7 @@ namespace Gameplay
 			int getNumberOfSticks();
 			int getNumberOfComparisons();
 			int getNumberOfArrayAccess();
+			int getDelayMilliseconds();
 		};
 	}
 }

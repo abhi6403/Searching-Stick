@@ -42,6 +42,16 @@ namespace Gameplay
 			std::srand(static_cast<unsigned int>(std::time(nullptr)));
 		}
 
+		void GameplayService::searchElement(Collection::SearchType search_type)
+		{
+			collection_controller->searchElement(search_type);
+		}
+
+		Collection::SearchType GameplayService::getCurrentSearchType()
+		{
+			return collection_controller->getSearchType();
+		}
+
 		void GameplayService::reset()
 		{
 			gameplay_controller->reset();
